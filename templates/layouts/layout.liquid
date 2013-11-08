@@ -29,7 +29,6 @@
             {% block content %}{% endblock %}
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %}{% endblock %}
-        {{ "main.js" | asset_url | script_tag }}
         <!-- TODO: stash a copy of jQuery in the project directory, can i just inline minified jquery? -->
         {{ "jquery-1.10.2.min.js" | asset_url | script_tag }}
         {{ "underscore-min.js" | asset_url | script_tag }}
