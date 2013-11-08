@@ -19,7 +19,7 @@
         <!-- Style block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
         <!-- TODO: move modernizr to proj direct -->
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        {{ "modernizr-2.6.2.min.js" | asset_url | script_tag }}
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -31,11 +31,11 @@
         {% block scripts %}{% endblock %}
         {{ "main.js" | asset_url | script_tag }}
         <!-- TODO: stash a copy of jQuery in the project directory, can i just inline minified jquery? -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        {{ "jquery-1.10.2.min.js" | asset_url | script_tag }}
         {{ "underscore-min.js" | asset_url | script_tag }}
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        {{ "plugins.js" | asset_url | script_tag }}
+        {{ "main.js" | asset_url | script_tag }}
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
