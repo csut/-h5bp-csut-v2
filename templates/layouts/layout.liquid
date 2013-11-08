@@ -32,6 +32,7 @@
         {{ "main.js" | asset_url | script_tag }}
         <!-- TODO: stash a copy of jQuery in the project directory, can i just inline minified jquery? -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        {{ "underscore-min.js" | asset_url | script_tag }}
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
