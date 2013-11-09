@@ -29,21 +29,6 @@
             {% block content %}{% endblock %}
         <!-- Script block allowing child pages to inject their own scripts -->
         {% block scripts %}{% endblock %}
-        <!-- TODO: stash a copy of jQuery in the project directory, can i just inline minified jquery? -->
-        {{ "jquery-1.10.2.min.js" | asset_url | script_tag }}
-        {{ "underscore-min.js" | asset_url | script_tag }}
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        {{ "plugins.js" | asset_url | script_tag }}
         {{ "main.js" | asset_url | script_tag }}
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
     </body>
 </html>
